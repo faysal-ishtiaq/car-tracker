@@ -14,7 +14,7 @@ $ sudo apt install git -y
 To get started follow open your terminal and run the commands sequentially
 
 ```bash
-$ git clone git@github.com:faysal-ishtiaq/car-tracker.git
+$ git clone https://github.com/faysal-ishtiaq/car-tracker.git
 $ cd car-tracker
 $ chmod +x install-dep.sh
 $ chmod +x setup-venv.sh
