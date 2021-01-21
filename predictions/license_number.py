@@ -4,7 +4,7 @@ import subprocess
 
 def main(img_filepath):
     try:
-        return subprocess.run(["openalpr", img_filepath])
+        return subprocess.run(["alpr", img_filepath])
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
