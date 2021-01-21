@@ -9,7 +9,8 @@ logger = logging.getLogger("ColorDetector")
 logging.basicConfig(level=logging.INFO)
 
 
-def main(arguments):
+def main(img_filepath):
+    logger.info("Detecting color for file: {}".format(img_filepath))
     objects = []
     yolo_config = get_yolo_path('yolov4.cfg')
     yolo_weight = get_yolo_path('yolov4.weights')
@@ -31,7 +32,7 @@ def main(arguments):
         color_labels
     )
 
-    img = cv2.imread(arguments.filename, cv2.IMREAD_COLOR)
+    img = cv2.imread(img_filepath, cv2.IMREAD_COLOR)
 
     if img is None:
         return {

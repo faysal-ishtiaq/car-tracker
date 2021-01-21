@@ -9,7 +9,8 @@ logger = logging.getLogger("ModelClassifier")
 logging.basicConfig(level=logging.INFO)
 
 
-def main(arguments):
+def main(img_filepath):
+    logger.info("Detecting make and model in file: {}".format(img_filepath))
     objects = []
 
     yolo_config = get_yolo_path('yolov4.cfg')
@@ -32,7 +33,7 @@ def main(arguments):
         make_model_labels
     )
 
-    img = cv2.imread(arguments.filename, cv2.IMREAD_COLOR)
+    img = cv2.imread(img_filepath, cv2.IMREAD_COLOR)
 
     if img is None:
         return {
