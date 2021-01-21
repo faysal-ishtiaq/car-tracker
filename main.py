@@ -4,13 +4,9 @@ from predictions import color, license_number, make_model
 
 
 def main(img_filepath):
-    return {
-        "cars": {
-            **color.main(img_filepath),
-            **license_number.main(img_filepath),
-            **make_model.main(img_filepath)
-        }
-    }
+    print(color.main(img_filepath))
+    print(license_number.main(img_filepath))
+    print(make_model.main(img_filepath))
 
 
 if __name__ == '__main__':
