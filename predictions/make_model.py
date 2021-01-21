@@ -17,11 +17,11 @@ def main(arguments):
     make_model_classifier = get_data_path('model-weights-spectrico-car-brand-recognition-mobilenet_v3-224x224-170620.mnn')
     make_model_labels = get_data_path('labels-makes.txt')
 
-    logger.info(f"YOLO config filepath: {yolo_config}")
-    logger.info(f"YOLO weight filepath: {yolo_weight}")
+    logger.info("YOLO config filepath: {}".format(yolo_config))
+    logger.info("YOLO weight filepath: {}".format(yolo_weight))
 
-    logger.info(f"YOLO color classifier filepath: {make_model_classifier}")
-    logger.info(f"YOLO color labels filepath: {make_model_labels}")
+    logger.info("YOLO color classifier filepath: {}".format(make_model_classifier))
+    logger.info("YOLO color labels filepath: {}".format(make_model_labels))
 
     net = cv2.dnn_DetectionModel(get_yolo_path('yolov4.cfg'), get_yolo_path('yolov4.weights'))
     net.setInputSize(608)

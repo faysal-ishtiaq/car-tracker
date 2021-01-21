@@ -16,11 +16,11 @@ def main(arguments):
     color_classifier = get_data_path('model-weights-spectrico-car-colors-recognition-mobilenet_v3-224x224-180420.mnn')
     color_labels = get_data_path('labels-colors.txt')
 
-    logger.info(f"YOLO config filepath: {yolo_config}")
-    logger.info(f"YOLO weight filepath: {yolo_weight}")
+    logger.info("YOLO config filepath: {}".format(yolo_config))
+    logger.info("YOLO weight filepath: {}".format(yolo_weight))
 
-    logger.info(f"YOLO color classifier filepath: {color_classifier}")
-    logger.info(f"YOLO color labels filepath: {color_labels}")
+    logger.info("YOLO color classifier filepath: {}".format(color_classifier))
+    logger.info("YOLO color labels filepath: {}".format(color_labels))
 
     net = cv2.dnn_DetectionModel(yolo_config, yolo_weight)
     net.setInputSize(608)
