@@ -3,12 +3,12 @@ import argparse
 from predictions import color, license_number, make_model
 
 
-def main(arguments):
+def main(img_filepath):
     return {
         "cars": {
-            **color.main(arguments),
-            **license_number.main(arguments),
-            **make_model.main(arguments)
+            **color.main(img_filepath),
+            **license_number.main(img_filepath),
+            **make_model.main(img_filepath)
         }
     }
 
@@ -18,4 +18,4 @@ if __name__ == '__main__':
     parser.add_argument("filepath")
     args = parser.parse_args()
 
-    main(args)
+    main(args.filepath)
