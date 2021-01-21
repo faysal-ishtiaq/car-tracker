@@ -6,6 +6,7 @@ To get started follow open your terminal and run the commands sequentially
 
 ```bash
 $ git clone https://github.com/faysal-ishtiaq/car-tracker.git
+$ cd car-tracker
 $ chmod +x install-dep.sh
 $ chmod +x setup-venv.sh
 $ sudo ./install-dep.sh
