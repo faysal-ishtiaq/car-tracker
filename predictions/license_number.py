@@ -4,7 +4,8 @@ import subprocess
 
 def main(img_filepath):
     try:
-        return subprocess.run(["alpr", img_filepath])
+        process = subprocess.run(["alpr", img_filepath], stdout=subprocess.PIPE)
+        return process.stdout
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
