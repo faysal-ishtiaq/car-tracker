@@ -10,7 +10,7 @@ $ cd car-tracker
 $ chmod +x install-dep.sh
 $ chmod +x setup-venv.sh
 $ sudo ./install-dep.sh
-$ sduo ./setup-venv.sh
+$ ./setup-venv.sh
 $ python main.py ./inputs/car-a.jpg
 $ python main.py ./inputs/car-b.png
 ```
