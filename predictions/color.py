@@ -2,18 +2,19 @@ import cv2
 import argparse
 
 from utils import classifier
+from utils.helper_functions import *
 
 
 def main(arguments):
     objects = []
 
-    net = cv2.dnn_DetectionModel('../yolov4/yolov4.cfg', '../yolov4/yolov4.weights')
+    net = cv2.dnn_DetectionModel(get_yolo_path('yolov4.cfg'), get_yolo_path('yolov4.weights'))
     net.setInputSize(608)
     net.setInputScale(1.0 / 255)
     net.setInputSwapRB(True)
     car_color_classifier = classifier.Classifier(
-        '../data/model-weights-spectrico-car-colors-recognition-mobilenet_v3-224x224-180420.mnn',
-        '../data/labels-colors.txt'
+        get_data_path('model-weights-spectrico-car-colors-recognition-mobilenet_v3-224x224-180420.mnn'),
+        get_data_path('labels-colors.txt')
     )
 
     img = cv2.imread(arguments.filename, cv2.IMREAD_COLOR)
