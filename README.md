@@ -1,6 +1,15 @@
 # car-tracker
 Detect and read license plate. Also predict car make and model.
 
+### Before getting started
+To get started with this program, you need to install git on your computer.
+
+This program is tested on Ubuntu 16.04. The command to install git on Ubuntu 16.04:
+
+```bash
+$ sudo apt install git -y
+```
+
 ### Get started
 To get started follow open your terminal and run the commands sequentially
 
