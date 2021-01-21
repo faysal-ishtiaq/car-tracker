@@ -20,6 +20,7 @@ $ chmod +x install-dep.sh
 $ chmod +x setup-venv.sh
 $ sudo ./install-dep.sh
 $ ./setup-venv.sh
+$ source venv/bin/activate
 $ python main.py ./inputs/car-a.jpg
 $ python main.py ./inputs/car-b.png
 ```
