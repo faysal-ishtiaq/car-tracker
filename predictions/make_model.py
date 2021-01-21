@@ -24,7 +24,7 @@ def main(arguments):
     logger.info("YOLO color labels filepath: {}".format(make_model_labels))
 
     net = cv2.dnn_DetectionModel(get_yolo_path('yolov4.cfg'), get_yolo_path('yolov4.weights'))
-    net.setInputSize(608)
+    net.setInputSize(608, 608)
     net.setInputScale(1.0 / 255)
     net.setInputSwapRB(True)
     car_make_classifier = classifier.Classifier(
