@@ -2,9 +2,9 @@ import argparse
 import subprocess
 
 
-def main(arguments):
+def main(img_filepath):
     try:
-        return subprocess.run("openalpr", arguments.filepath)
+        return subprocess.run("openalpr", img_filepath)
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
